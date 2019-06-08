@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Akka.Persistence.Query</name>
+    </assembly>
+    <members>
+        <member name="T:Akka.Persistence.Query.EventEnvelope">
+            <summary>
+            Event wrapper adding meta data for the events in the result stream of
+            <see cref="T:Akka.Persistence.Query.IEventsByTagQuery"/> query, or similar queries.
+            </summary>
+        </member>
+        <member name="M:Akka.Persistence.Query.EventEnvelope.#ctor(Akka.Persistence.Query.Offset,System.String,System.Int64,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Akka.Persistence.Query.EventEnvelope"/> class.
+            </summary>
+        </member>
+        <member name="T:Akka.Persistence.Query.IReadJournal">
+            <summary>
+            API for reading persistent events and information derived
+            from stored persistent events.
+            <para>
+            The purpose of the API is not to enforce compatibility between different
+            journal implementations, because the technical capabilities may be very different.
+            The interface is very open so that different journals may implement specific queries.
+            </para>
+            There are a few pre-defined queries that a query implementation may implement,
+            such as <see cref="T:Akka.Persistence.Query.IEventsByPersistenceIdQuery"/>, <see cref="T:Akka.Persistence.Query.IPersistenceIdsQuery"/> and <see cref="T:Akka.Persistence.Query.IEventsByTagQuery"/>
+            Implementation of these queries are optional and query (journal) plugins may define
+            their own specialized queries by implementing other methods.
+            <example>
+            var journal = PersistenceQuery.Get(system).ReadJournalFor&lt;SomeCoolReadJournal&gt;(queryPluginConfigPath)
+            var events = journal.Query(new EventsByTag("mytag", 0L))
+            </example>
+            </summary>
+        </member>
+        <member name="T:Akka.Persistence.Query.IEventsByTagQuery">
+            <summary>
+            A plugin may optionally support this query by implementing this trait.
+            </summary>
+        </member>
+        <member name="M:Akka.Persistence.Query.IEventsByTagQuery.EventsByTag(System.String,Akka.Persistence.Query.Offset)">
+            <summary>
+            Query events that have a specific tag. A tag can for example correspond to an
+            aggregate root type (in DDD terminology).
+            <para>
+            The consumer can keep track of its current position in the event stream by storing the
+            <paramref name="offset"/> and restart the query from a given <paramref name="offset"/> after a crash/restart.
+            </para>
+            The exact meaning of the <paramref name="offset"/> depends on the journal and must be documented by the
+            read journal plugin. It may be a sequential id number that uniquely identifies the
+            position of each event within the event stream. Distributed data stores cannot easily
+            support those semantics and they may use a weaker meaning. For example it may be a
+            timestamp (taken when the event was created or stored). Timestamps are not unique and
+            not strictly ordered, since clocks on different machines may not be synchronized.
+            <para>
+            The returned event stream should be ordered by <paramref name="offset"/> if possible, but this can also be
+            difficult to fulfill for a distributed data store. The order must be documented by the
+            read journal plugin.
+            </para>
+            The stream is not completed when it reaches the end of the currently stored events,
+            but it continues to push new events when new events are persisted.
+            Corresponding query that is completed when it reaches the end of the currently
+            stored events is provided by <see cref="M:Akka.Persistence.Query.ICurrentEventsByTagQuery.CurrentEventsByTag(System.String,Akka.Persistence.Query.Offset)"/>.
+            </summary>
+        </member>
+        <member name="T:Akka.Persistence.Query.ICurrentEventsByTagQuery">
+            <summary>
+            A plugin may optionally support this query by implementing this trait.
+            </summary>
+        </member>
+        <member name="M:Akka.Persistence.Query.ICurrentEventsByTagQuery.CurrentEventsByTag(System.String,Akka.Persistence.Query.Offset)">
+            <summary>
+            Same type of query as <see cref="M:Akka.Persistence.Query.IEventsByTagQuery.EventsByTag(System.String,Akka.Persistence.Query.Offset)"/> but the event stream
+            is completed immediately when it reaches the end of the "result set". Events that are
+            stored after the query is completed are not included in the event stream.
+            </summary>
+        </member>
+        <member name="T:Akka.Persistence.Query.IEventsByPersistenceIdQuery">
+            <summary>
+            A plugin may optionally support this query by implementing this trait.
+            </summary>
+        </member>
+        <member name="M:Akka.Persistence.Query.IEventsByPersistenceIdQuery.EventsByPersistenceId(System.String,System.Int64,System.Int64)">
+            <summary>
+            Query events for a specific <see cref="T:Akka.Persistence.PersistentActor"/> identified by <paramref name="persistenceId"/>.
+            <para>
+            You can retrieve a subset of all events by specifying <paramref name="fromSequenceNr"/> and <paramref name="toSequenceNr"/>
+            or use <c>0L</c> and <see cref="F:System.Int64.MaxValue"/> respectively to retrieve all events.
+            </para>
+            The returned event stream should be ordered by sequence number.
+            <para>
+            The stream is not completed when it reaches the end of the currently stored events,
+            but it continues to push new events when new events are persisted.
+            Corresponding query that is completed when it reaches the end of the currently
+            stored events is provided by <see cref="M:Akka.Persistence.Query.ICurrentEventsByPersistenceIdQuery.CurrentEventsByPersistenceId(System.String,System.Int64,System.Int64)"/>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Akka.Persistence.Query.ICurrentEventsByPersistenceIdQuery">
+            <summary>
+            A plugin may optionally support this query by implementing this trait.
+            </summary>
+        </member>
+        <member name="M:Akka.Persistence.Query.ICurrentEventsByPersistenceIdQuery.CurrentEventsByPersistenceId(System.String,System.Int64,System.Int64)">
+            <summary>
+            Same type of query as <see cref="M:Akka.Persistence.Query.IEventsByPersistenceIdQuery.EventsByPersistenceId(System.String,System.Int64,System.Int64)"/>
+            but the event stream is completed immediately when it reaches the end of
+            the "result set". Events that are stored after the query is completed are
+            not included in the event stream.
+            </summary>
+        </member>
+        <member name="T:Akka.Persistence.Query.ICurrentPersistenceIdsQuery">
+            <summary>
+            A plugin may optionally support this query by implementing this trait.
+            </summary>
+        </member>
+        <member name="M:Akka.Persistence.Query.ICurrentPersistenceIdsQuery.CurrentPersistenceIds">
+            <summary>
+            Same type of query as <see cref="M:Akka.Persistence.Query.IPersistenceIdsQuery.PersistenceIds"/> but the stream
+            is completed immediately when it reaches the end of the "result set". Persistent
+            actors that are created after the query is completed are not included in the stream.
+            </summary>
+        </member>
+        <member name="M:Akka.Persistence.Query.IPersistenceIdsQuery.PersistenceIds">
+            <summary>
+            Query all <see cref="T:Akka.Persistence.PersistentActor"/> identifiers, i.e. as defined by the
+            `persistenceId` of the <see cref="T:Akka.Persistence.PersistentActor"/>.
+            
+            The stream is not completed when it reaches the end of the currently used `persistenceIds`,
+            but it continues to push new `persistenceIds` when new persistent actors are created.
+            Corresponding query that is completed when it reaches the end of the currently
+            currently used `persistenceIds` is provided by <see cref="M:Akka.Persistence.Query.ICurrentPersistenceIdsQuery.CurrentPersistenceIds"/>.
+            </summary>
+        </member>
+        <member name="T:Akka.Persistence.Query.IReadJournalProvider">
+            <summary>
+            A query plugin must implement a class that implements this interface. 
+            A read journal plugin must provide implementations for <see cref="T:Akka.Persistence.Query.IReadJournal"/>.
+            </summary> 
+        </member>
+        <member name="M:Akka.Persistence.Query.IReadJournalProvider.GetReadJournal">
+            <summary>
+            This corresponds to the instance that is returned by <see cref="M:Akka.Persistence.Query.PersistenceQuery.ReadJournalFor``1(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Akka.Persistence.Query.Offset.NoOffset">
+            <summary>
+            Used when retrieving all events.
+            </summary>
+        </member>
+        <member name="M:Akka.Persistence.Query.Offset.Sequence(System.Int64)">
+            <summary>
+            Corresponds to an ordered sequence number for the events.Note that the corresponding
+            offset of each event is provided in the <see cref="T:Akka.Persistence.Query.EventEnvelope"/>,
+            which makes it possible to resume the stream at a later point from a given offset.
+            The `offset` is exclusive, i.e.the event with the exact same sequence number will not be included
+            in the returned stream. This means that you can use the offset that is returned in <see cref="T:Akka.Persistence.Query.EventEnvelope"/>
+            as the `offset` parameter in a subsequent query.
+            </summary>
+        </member>
+        <member name="T:Akka.Persistence.Query.Sequence">
+            <summary>
+            Corresponds to an ordered sequence number for the events.Note that the corresponding
+            offset of each event is provided in the <see cref="T:Akka.Persistence.Query.EventEnvelope"/>,
+            which makes it possible to resume the stream at a later point from a given offset.
+            The `offset` is exclusive, i.e.the event with the exact same sequence number will not be included
+            in the returned stream. This means that you can use the offset that is returned in <see cref="T:Akka.Persistence.Query.EventEnvelope"/>
+            as the `offset` parameter in a subsequent query.
+            </summary>
+        </member>
+        <member name="M:Akka.Persistence.Query.Sequence.#ctor(System.Int64)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Akka.Persistence.Query.Sequence"/> class.
+            </summary>
+        </member>
+        <member name="T:Akka.Persistence.Query.NoOffset">
+            <summary>
+            Used when retrieving all events.
+            </summary>
+        </member>
+        <member name="P:Akka.Persistence.Query.NoOffset.Instance">
+            <summary>
+            The singleton instance of <see cref="T:Akka.Persistence.Query.NoOffset"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

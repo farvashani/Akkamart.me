@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNetCore.Blazor</id>
+    <version>3.0.0-preview5-19227-01</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt</licenseUrl>
+    <projectUrl>https://asp.net/</projectUrl>
+    <iconUrl>https://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <description>Build client-side single-page applications (SPAs) with Blazor running under WebAssembly.
+
+This package was built from the source code at https://github.com/aspnet/AspNetCore/tree/5502cf46706a25c39ce78a57b9191714c0eb40c2</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>aspnetcore components</tags>
+    <serviceable>true</serviceable>
+    <repository type="git" url="https://github.com/aspnet/AspNetCore" commit="5502cf46706a25c39ce78a57b9191714c0eb40c2" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.AspNetCore.Components.Browser" version="3.0.0-preview5-19227-01" exclude="Build,Analyzers" />
+        <dependency id="Mono.WebAssembly.Interop" version="3.0.0-preview5.19227.9" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

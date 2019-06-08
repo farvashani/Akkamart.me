@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+   <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Akkatecture" Version="0.4.5" />
+    <PackageReference Include="Akka.Bootstrap.Docker" Version="0.2.1" />
+    <PackageReference Include="Akkatecture.Clustering" Version="0.4.5" />
+    
+  </ItemGroup>
+</Project>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Akka.Bootstrap.Docker</id>
+    <version>0.2.1</version>
+    <authors>Petabridge</authors>
+    <owners>Petabridge</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/petabridge/akkadotnet-bootstrap/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/petabridge/akkadotnet-bootstrap</projectUrl>
+    <iconUrl>https://petabridge.com/images/logo.png</iconUrl>
+    <description>Akka.Remote and Akka.Cluster bootstrapping utilities for Docker.</description>
+    <releaseNotes>Update to Akka 1.3.13
+Added [full `Akka.Bootstrap.Docker` code sample](https://github.com/petabridge/akkadotnet-bootstrap/tree/dev/src/Akka.Bootstrap.Docker.Sample)
+Rewrote [`Akka.Bootstrap.Docker` documentation](https://github.com/petabridge/akkadotnet-bootstrap/tree/dev/src/Akka.Bootstrap.Docker)</releaseNotes>
+    <copyright>Copyright © 2015-2019 Petabridge®</copyright>
+    <repository type="git" url="https://github.com/petabridge/akkadotnet-bootstrap" commit="3e9d00062578ab173020d9328187e603a583a45c" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Akka" version="1.3.13" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

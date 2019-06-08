@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Akka.Persistence.SqlServer</id>
+    <version>1.3.7</version>
+    <authors>Akka.NET Team</authors>
+    <owners>Akka.NET Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/akkadotnet/Akka.Persistence.SqlServer/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/akkadotnet/Akka.Persistence.SqlServer</projectUrl>
+    <iconUrl>http://getakka.net/images/akkalogo.png</iconUrl>
+    <description>Akka Persistence journal and snapshot store backed by SQL Server database.</description>
+    <releaseNotes>Upgrades to Akka.Persistence 1.3.7, which includes some major changes for SQL-based SnapShot stores, which you can read more about here: https://github.com/akkadotnet/akka.net/issues/3422
+This should significantly improve the performance of SQL-based journals for loading large snapshots.
+Also, removes the dependency on the Akka.TestKit for this package.</releaseNotes>
+    <copyright>Copyright © 2013-2017 Akka.NET Team</copyright>
+    <tags>akka actors actor model Akka concurrency SQL SQL Server</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="Akka" version="1.3.7" exclude="Build,Analyzers" />
+        <dependency id="Akka.Persistence" version="1.3.7" exclude="Build,Analyzers" />
+        <dependency id="Akka.Persistence.Sql.Common" version="1.3.7" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard1.6">
+        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SqlClient" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="Akka" version="1.3.7" exclude="Build,Analyzers" />
+        <dependency id="Akka.Persistence" version="1.3.7" exclude="Build,Analyzers" />
+        <dependency id="Akka.Persistence.Sql.Common" version="1.3.7" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

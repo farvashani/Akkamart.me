@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNetCore.Authentication.Twitter</id>
+    <version>3.0.0-preview5-19227-01</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt</licenseUrl>
+    <projectUrl>https://asp.net/</projectUrl>
+    <iconUrl>https://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <description>ASP.NET Core middleware that enables an application to support Twitter's OAuth 1.0 authentication workflow.
+
+This package was built from the source code at https://github.com/aspnet/AspNetCore/tree/5502cf46706a25c39ce78a57b9191714c0eb40c2</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>aspnetcore authentication security</tags>
+    <serviceable>true</serviceable>
+    <repository type="git" url="https://github.com/aspnet/AspNetCore" commit="5502cf46706a25c39ce78a57b9191714c0eb40c2" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.0">
+        <frameworkReference name="Microsoft.NETCore.App" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+</package>

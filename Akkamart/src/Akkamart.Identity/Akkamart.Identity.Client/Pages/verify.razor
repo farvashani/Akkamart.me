@@ -1,0 +1,14 @@
+@page "/verify"
+<div id="sendVerificationCode">
+    <form action="sendVerificationCode" method="POST">
+        <input type="text" name="userIdentity" id="userIdentity" placeholder="Username / mobile" required />
+        <input type="tel" name="userMobile" id="userMobile" required/>
+        <input type="submit" value="send" />
+    </form>
+</div>
+<div id="verify">
+        <form method="POST" action="verify">
+            <input type="text" name="verificationCode" id="verificationCode" required/>
+            <input type="submit" value="Verify"/>
+        </form>
+    </div>

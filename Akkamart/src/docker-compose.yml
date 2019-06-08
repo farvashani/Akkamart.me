@@ -1,0 +1,53 @@
+version: "3"
+services:
+  akkamart-home:
+    image: akkamart-home:${TAG:-latest}
+    container_name: akkamart-home
+    build:
+      context: ./Akkamart/Akkamart.Home
+      dockerfile: Dockerfile
+    ports:
+      - "4001:4001"
+      - "4002:4002"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Staging
+      - ASPNETCORE_URLS=http://*:4001
+  akkamart-identity:
+    image: akkamart-identity:${TAG:-latest}
+    container_name: akkamart-identity
+    build:
+      context: ./Akkamart/Akkamart.Identity
+      dockerfile: Dockerfile
+    ports:
+      - "4003:4003"
+      - "4004:4004"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Staging
+      - ASPNETCORE_URLS=http://*:4003
+  nginx:
+    image: nginx:1.15-alpine
+    restart: unless-stopped
+    depends_on: 
+      - akkamart-identity
+      - akkamart-home
+    volumes:
+      - ./wwwroot:/usr/share/nginx/html
+      # - ./data/blazorapp/bin/Debug/netstandard2.0/publish/BlazorApp/dist:/usr/share/nginx/html
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl/certbot/conf:/etc/letsencrypt
+      - ./ssl/certbot/www:/var/www/certbot
+    ports:
+      - "80:80"
+      - "443:443"
+      - "5555:5555"
+      - "4444:4444"
+    command: '/bin/sh -c ''while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g "daemon off;"'''
+
+  certbot:
+    image: certbot/certbot
+    restart: unless-stopped
+    volumes:
+      - ./ssl/certbot/conf:/etc/letsencrypt
+      - ./ssl/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
