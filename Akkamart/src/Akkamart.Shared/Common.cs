@@ -20,7 +20,7 @@ namespace Akkamart.Shared
                                              "localhost"
                                              : System.Net.Dns.GetHostName()))
                 .Replace("{{SEED_NODE_HOST}}", Environment.GetEnvironmentVariable("SEED_NODE_HOST") ?? "localhost")
-                .Replace("{{SEED_NODE_PORT}}", Environment.GetEnvironmentVariable("SEED_NODE_PORT") ?? "8080");
+                .Replace("{{SEED_NODE_PORT}}", Environment.GetEnvironmentVariable("SEED_NODE_PORT") ?? "5050");
             Console.WriteLine(conf);
             
             var config = ConfigurationFactory.ParseString(conf);

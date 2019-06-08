@@ -18,7 +18,35 @@
                 "enabled": true
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "OWN_HOST": "localhost",
+                "SEED_NODE_HOST": "localhost",
+                "SQLSERVER_CONNECTION": "Server=localhost,1433;Initial Catalog=Akkamart;Persist Security Info=False;User ID=sa;Password=<YourStrong!Passw0rd>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;"
+                // "SEED_NODE_PORT": "5050",
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "Membership",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Akkamart/src/Akkamart.Membership/Akkamart.Membership.Server/bin/Debug/netcoreapp3.0/Akkamart.Membership.Server.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Akkamart/src/Akkamart.Membership/Akkamart.Membership.Server",
+            "stopAtEntry": false,
+            "launchBrowser": {
+                "enabled": true
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "OWN_HOST": "localhost",
+                "SEED_NODE_HOST": "localhost",
+                "SQLSERVER_CONNECTION": "Server=localhost,1433;Initial Catalog=Akkamart;Persist Security Info=False;User ID=sa;Password=<YourStrong!Passw0rd>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;"
+                // "SEED_NODE_PORT": "5050",
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
@@ -30,8 +58,17 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Akkamart/src/Seed1/bin/Debug/netcoreapp3.0/Seed1.dll",
-            "args": [],
+            "program": "${workspaceFolder}/Akkamart/src/Akkamart.Seed1/bin/Debug/netcoreapp3.0/Akkamart.Seed1.dll",
+            "args": [
+                "akkamart.seed1.conf"
+            ],
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "OWN_HOST": "localhost",
+                "SEED_NODE_HOST": "localhost",
+                "SQLSERVER_CONNECTION": "Server=localhost,1433;Initial Catalog=Akkamart;Persist Security Info=False;User ID=sa;Password=<YourStrong!Passw0rd>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;"
+                // "SEED_NODE_PORT": "5050",
+            },
             "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
             "console": "internalConsole",
@@ -49,6 +86,7 @@
             "name": "Compound",
             "configurations": [
                 "Home",
+                "Membership",
                 "Seed1"
             ]
         }

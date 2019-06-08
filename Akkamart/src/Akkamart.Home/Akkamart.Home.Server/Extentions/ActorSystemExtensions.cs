@@ -16,8 +16,8 @@ namespace Akkamart.Home.Server.Actors.Extentions {
                 "ClusterListenerActor");
 
             var shardProxyRoleName = config.GetString ("akka.cluster.singleton-proxy.role");
-            var clientManagerProxy = StartUserClientClusterProxy (actorSystem,
-                shardProxyRoleName);
+            // var clientManagerProxy = StartUserClientClusterProxy (actorSystem,
+            //     shardProxyRoleName);
 
             var clientManager = actorSystem.ActorOf (Props.Create (() =>
                 new ClientManager ()), "client-manager");
@@ -27,12 +27,12 @@ namespace Akkamart.Home.Server.Actors.Extentions {
 
             return actorSystem;
         }
-        public static IActorRef StartUserClientClusterProxy (ActorSystem actorSystem, string proxyRoleName) {
-            var clusterProxy = ClusterFactory<ClientManager, ClientActor, ClientId>
-                .StartAggregateClusterProxy (actorSystem, proxyRoleName);
+        // public static IActorRef StartUserClientClusterProxy (ActorSystem actorSystem, string proxyRoleName) {
+        //     var clusterProxy = ClusterFactory<ClientManager, ClientActor, ClientId>
+        //         .StartAggregateClusterProxy (actorSystem, proxyRoleName);
 
-            return clusterProxy;
-        }
+        //     return clusterProxy;
+        // }
 
     }
 }
