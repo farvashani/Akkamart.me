@@ -11,13 +11,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Home.Server", "Akk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Home.Shared", "Akkamart.Home\Akkamart.Home.Shared\Akkamart.Home.Shared.csproj", "{035EFA80-F4CD-4288-A376-EC0C4F573C26}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Akkamart.Identity", "Akkamart.Identity", "{7F5DFBFB-17AD-488F-B2F9-15940D70A201}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Akkamart.Membership", "Akkamart.Membership", "{7F5DFBFB-17AD-488F-B2F9-15940D70A201}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Identity.Client", "Akkamart.Identity\Akkamart.Identity.Client\Akkamart.Identity.Client.csproj", "{5F6FFBBB-826B-45A8-B27C-788FC858129F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Membership.Client", "Akkamart.Membership\Akkamart.Membership.Client\Akkamart.Membership.Client.csproj", "{5F6FFBBB-826B-45A8-B27C-788FC858129F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Identity.Server", "Akkamart.Identity\Akkamart.Identity.Server\Akkamart.Identity.Server.csproj", "{5D12FB7D-361A-4D97-A95B-C13AD47FFB94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Membership.Server", "Akkamart.Membership\Akkamart.Membership.Server\Akkamart.Membership.Server.csproj", "{5D12FB7D-361A-4D97-A95B-C13AD47FFB94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Identity.Shared", "Akkamart.Identity\Akkamart.Identity.Shared\Akkamart.Identity.Shared.csproj", "{94EB849E-4F19-4019-934C-1BFD44FA5735}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Membership.Shared", "Akkamart.Membership\Akkamart.Membership.Shared\Akkamart.Membership.Shared.csproj", "{94EB849E-4F19-4019-934C-1BFD44FA5735}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Seed1", "Akkamart.Seed1\Akkamart.Seed1.csproj", "{102F36CC-6C65-4114-9735-C1C1C18A5784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Shared", "Akkamart.Shared\Akkamart.Shared.csproj", "{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,6 +108,30 @@ Global
 		{94EB849E-4F19-4019-934C-1BFD44FA5735}.Release|x64.Build.0 = Release|Any CPU
 		{94EB849E-4F19-4019-934C-1BFD44FA5735}.Release|x86.ActiveCfg = Release|Any CPU
 		{94EB849E-4F19-4019-934C-1BFD44FA5735}.Release|x86.Build.0 = Release|Any CPU
+		{102F36CC-6C65-4114-9735-C1C1C18A5784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{102F36CC-6C65-4114-9735-C1C1C18A5784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{102F36CC-6C65-4114-9735-C1C1C18A5784}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{102F36CC-6C65-4114-9735-C1C1C18A5784}.Debug|x64.Build.0 = Debug|Any CPU
+		{102F36CC-6C65-4114-9735-C1C1C18A5784}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{102F36CC-6C65-4114-9735-C1C1C18A5784}.Debug|x86.Build.0 = Debug|Any CPU
+		{102F36CC-6C65-4114-9735-C1C1C18A5784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{102F36CC-6C65-4114-9735-C1C1C18A5784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{102F36CC-6C65-4114-9735-C1C1C18A5784}.Release|x64.ActiveCfg = Release|Any CPU
+		{102F36CC-6C65-4114-9735-C1C1C18A5784}.Release|x64.Build.0 = Release|Any CPU
+		{102F36CC-6C65-4114-9735-C1C1C18A5784}.Release|x86.ActiveCfg = Release|Any CPU
+		{102F36CC-6C65-4114-9735-C1C1C18A5784}.Release|x86.Build.0 = Release|Any CPU
+		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Debug|x64.Build.0 = Debug|Any CPU
+		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Debug|x86.Build.0 = Debug|Any CPU
+		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Release|x64.ActiveCfg = Release|Any CPU
+		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Release|x64.Build.0 = Release|Any CPU
+		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Release|x86.ActiveCfg = Release|Any CPU
+		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{28BB315B-F15D-45ED-A38A-EA7FA326B24A} = {1C0CA930-0570-4AC8-845D-37C7F2E53E67}

@@ -24,7 +24,7 @@ namespace Akkamart.Shared
             Console.WriteLine(conf);
             
             var config = ConfigurationFactory.ParseString(conf);
-            return ActorSystem.Create("acme", config);
+            return ActorSystem.Create("akkamart", config);
         }
 
         public static void WaitForExit()

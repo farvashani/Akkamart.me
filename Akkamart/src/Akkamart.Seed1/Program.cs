@@ -4,7 +4,7 @@ using System.Threading;
 using Akka.Actor;
 using Akka.Configuration;
 using Akka.Event;
-using Shared;
+using Akkamart.Shared;
 
 namespace Akkamart.Seed1 {
     internal static class Program {
