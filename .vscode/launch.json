@@ -69,7 +69,7 @@
                 "SQLSERVER_CONNECTION": "Server=localhost,1433;Initial Catalog=Akkamart;Persist Security Info=False;User ID=sa;Password=<YourStrong!Passw0rd>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;"
                 // "SEED_NODE_PORT": "5050",
             },
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/Akkamart/src/Akkamart.Seed1",
             // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
             "console": "internalConsole",
             "stopAtEntry": false
@@ -89,5 +89,5 @@
                 "Membership",
                 "Seed1"
             ]
-        }
+        }]
 }

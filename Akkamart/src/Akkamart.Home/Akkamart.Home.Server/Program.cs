@@ -13,7 +13,9 @@ namespace Akkamart.Home.Server
                 .SetBasePath (Directory.GetCurrentDirectory ())
                 .AddEnvironmentVariables ()
                 .AddJsonFile ("appsettings.json", optional : false, reloadOnChange : true)
-                .AddJsonFile ($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", optional : true, reloadOnChange : true)
+                .AddJsonFile ($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", 
+                                optional : true, reloadOnChange : true)
+                .AddCommandLine(args)
                 .Build ();
 
             var env = Environment.GetEnvironmentVariable ("ASPNETCORE_ENVIRONMENT");
