@@ -1,13 +1,11 @@
-using System;
 using Akka.Actor;
-using Akkamart.Home.Server.Config;
-using Akkamart.Home.Server.Domain;
-using Akkamart.Home.Server.Domain.Client;
-using Akkamart.Shared;
-using Akkatecture.Clustering.Core;
+using Akkamart.Server.Shared;
+using Akkamart.Server.Shared.Client;
+using Akkamart.Server.Shared.Cluster;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Akkamart.Home.Server.Actors.Extentions {
+namespace Akkamart.Home.Server.Actors.Extentions
+{
     public static class ActorSystemExtensions {
         public static ActorSystem AddActorsystem (this IServiceCollection services, string confUrl) {
             // var config = ConfigurationLoader.Load (confUrl);
@@ -15,7 +13,7 @@ namespace Akkamart.Home.Server.Actors.Extentions {
             var actorSystem = Common.CreateSystem (confUrl);
 
            var clusterListener =  actorSystem.ActorOf (Props.Create (typeof (ClusterListenerActor)),
-                "ClusterListenerActor");
+                "clusterlistener");
 
             //var shardProxyRoleName = config.GetString ("akka.cluster.singleton-proxy.role");
             // var clientManagerProxy = StartUserClientClusterProxy (actorSystem,
@@ -23,8 +21,12 @@ namespace Akkamart.Home.Server.Actors.Extentions {
 
             var clientManager = actorSystem.ActorOf (Props.Create (() =>
                 new ClientManager ()), "client-manager");
+            var NavigationActor = actorSystem.ActorOf (Props.Create (() =>
+                new Navigator ()), "navigation-actor");
+
 
             services.AddAkkatecture (actorSystem)
+                .AddActorReference<Navigator> (NavigationActor)
                 .AddActorReference<ClientManager> (clientManager)
                 .AddActorReference<ClusterListenerActor> (clusterListener);
 

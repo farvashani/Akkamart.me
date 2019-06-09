@@ -1,32 +1,32 @@
-using Akkamart.Home.Server.Domain;
-using Akkamart.Home.Shared;
 using Akkatecture.Akka;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using Akkamart.Shared.Metadata;
+using Akkamart.Server.Shared.Client;
+using Akkamart.Server.Shared.Client.Commands;
 
 namespace Akkamart.Home.Server.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("/home/api/[controller]")]
     public class HomeController : Controller
     {
-        private readonly ActorRefProvider<HomeActor> _HomeActor;        
-        public async Task<IActionResult> ActionName()
+        public HomeController(ActorRefProvider<Navigator> navs)
         {
-            // TODO: Your code here
-            await Task.Yield();
-            return View();
+            _NavigationActor = navs;
+            
+        }
+        private readonly ActorRefProvider<Navigator> _NavigationActor;        
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetTopNavigation()
+        {
+            var getNavigationState = new GetNavigationState();
+            var navs = await _NavigationActor.Ask<NavigationState>(getNavigationState);
+            return Ok(navs);
         }
         
        
-       public HomeController(ActorRefProvider<HomeActor> homeActor)
-       {
-           _HomeActor = homeActor;
-           
-       }
-        
+    
        
     }
 }

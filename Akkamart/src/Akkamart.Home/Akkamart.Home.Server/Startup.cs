@@ -15,8 +15,11 @@ namespace Akkamart.Home.Server {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices (IServiceCollection services) {
+
              actorsystem = services.AddActorsystem ("akkamart.home.conf");
+
             services.AddMvc ().AddNewtonsoftJson ();
+            
             services.AddResponseCompression (opts => {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat (
                     new [] { MediaTypeNames.Application.Octet });
@@ -40,7 +43,7 @@ namespace Akkamart.Home.Server {
             app.UsePathBase ("/home/");
              
 
-           app.UseStaticFiles(); 
+           //app.UseStaticFiles(); 
            app.UseClientActorMiddleware();
             app.UseBlazor<Client.Startup> ();
             

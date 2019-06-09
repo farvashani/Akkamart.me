@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+   <ItemGroup>
+    <PackageReference Include="Akkatecture" Version="0.4.5" />
+    <PackageReference Include="Akka.Bootstrap.Docker" Version="0.2.1" />
+    <PackageReference Include="Akkatecture.Clustering" Version="0.4.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview5-19227-01" />
+    <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="3.0.0-preview5-19227-01" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Akkamart.Shared\Akkamart.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

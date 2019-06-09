@@ -1,0 +1,23 @@
+
+@inject HttpClient Http
+<div id="directories">
+    <ul>
+    @foreach (var navItem in navState?.TopNavigation)
+            {
+                <li><a href="@navItem.BaseUrl">@navItem.Title</a></li>
+               
+            }
+        
+    </ul>
+
+</div>
+@functions {
+    NavigationState navState = new NavigationState();
+
+    protected override async Task OnInitAsync()
+    {
+
+        navState = await Http.GetJsonAsync<NavigationState>("api/home/GetTopNavigation");
+        
+    }
+}

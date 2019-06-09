@@ -6,6 +6,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Akkamart.Shared\Akkamart.Shared.csproj" />
+    <ProjectReference Include="..\Akkamart.Server.Shared\Akkamart.Server.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="akkamart.seed1.conf">

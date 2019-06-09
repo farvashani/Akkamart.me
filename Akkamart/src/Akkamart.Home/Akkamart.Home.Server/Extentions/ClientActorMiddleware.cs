@@ -2,6 +2,8 @@ using System.Threading.Tasks;
 using Akka.Actor;
 using Akkamart.Home.Server.Domain.Client;
 using Akkamart.Home.Server.Domain.Client.Commands;
+using Akkamart.Server.Shared.Client;
+using Akkamart.Server.Shared.Client.Commands;
 using Akkamart.Shared;
 using Akkatecture.Akka;
 using Microsoft.AspNetCore.Builder;
@@ -37,11 +39,11 @@ namespace Akkamart.Home.Server.Actors.Extentions {
                 else
                     clientid = ClientId.NewDeterministic (ClientNameSpace.Instance, "clint-0");
 
-                var LogReqCmd = new LogClientDetails (clientid, context.Request.Headers);
+                var regClientDetails = new RegisterClientDetails (clientid);
 
                 // var clientManager = _actorSystem.ActorOf (Props.Create (() =>
                 //      new ClientManager ()), "client-manager");
-                _clientManager.Tell (LogReqCmd);
+                _clientManager.Tell (regClientDetails);
 
                 context.Items.Add ("clientManager", _clientManager);
                 await _next.Invoke (context);

@@ -9,19 +9,13 @@
     <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="3.0.0-preview5-19227-01" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview5-19227-01" />
-     <PackageReference Include="Akkatecture" Version="0.4.5" />
-    <PackageReference Include="Akka.Bootstrap.Docker" Version="0.2.1" />
-    <PackageReference Include="Akkatecture.Clustering" Version="0.4.5" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="3.0.0-preview5-19227-01" />
-  </ItemGroup>
+  
 
   <ItemGroup>
     <ProjectReference Include="..\Akkamart.Membership.Client\Akkamart.Membership.Client.csproj" />
     <ProjectReference Include="..\Akkamart.Membership.Shared\Akkamart.Membership.Shared.csproj" />
     <ProjectReference Include="..\..\Akkamart.Shared\Akkamart.Shared.csproj" />
+    <ProjectReference Include="..\..\Akkamart.Server.Shared\Akkamart.Server.Shared.csproj" />
   </ItemGroup>
      <ItemGroup>
     <None Update="akkamart.Membership.conf">

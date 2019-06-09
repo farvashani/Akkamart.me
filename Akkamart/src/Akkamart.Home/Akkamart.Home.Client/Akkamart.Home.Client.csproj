@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Akkamart.Home.Shared\Akkamart.Home.Shared.csproj" />
+    <ProjectReference Include="..\..\Akkamart.Shared\Akkamart.Shared.csproj" />
   </ItemGroup>
 
 </Project>

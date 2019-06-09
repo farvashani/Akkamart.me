@@ -5,6 +5,7 @@ using Akka.Actor;
 using Akka.Configuration;
 using Akka.Event;
 using Akkamart.Shared;
+using Akkamart.Server.Shared;
 
 namespace Akkamart.Seed1 {
     internal static class Program {

@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Seed1", "Akkamart.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Shared", "Akkamart.Shared\Akkamart.Shared.csproj", "{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akkamart.Server.Shared", "Akkamart.Server.Shared\Akkamart.Server.Shared.csproj", "{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -132,6 +134,18 @@ Global
 		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Release|x64.Build.0 = Release|Any CPU
 		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Release|x86.ActiveCfg = Release|Any CPU
 		{665E578E-DE5E-4F1B-8DF9-6E2BCFE1D66C}.Release|x86.Build.0 = Release|Any CPU
+		{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}.Debug|x64.Build.0 = Debug|Any CPU
+		{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}.Debug|x86.Build.0 = Debug|Any CPU
+		{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}.Release|x64.ActiveCfg = Release|Any CPU
+		{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}.Release|x64.Build.0 = Release|Any CPU
+		{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}.Release|x86.ActiveCfg = Release|Any CPU
+		{9BE20C1E-ADD9-497D-9AA8-C1F459912B16}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{28BB315B-F15D-45ED-A38A-EA7FA326B24A} = {1C0CA930-0570-4AC8-845D-37C7F2E53E67}
