@@ -14,7 +14,7 @@ namespace Akkamart.Home.Server.Actors.Extentions {
             // var actorSystem = Akka.Actor.ActorSystem.Create ("akkamart-system", config);
             var actorSystem = Common.CreateSystem (confUrl);
 
-            actorSystem.ActorOf (Props.Create (typeof (ClusterListenerActor)),
+           var clusterListener =  actorSystem.ActorOf (Props.Create (typeof (ClusterListenerActor)),
                 "ClusterListenerActor");
 
             //var shardProxyRoleName = config.GetString ("akka.cluster.singleton-proxy.role");
@@ -25,7 +25,8 @@ namespace Akkamart.Home.Server.Actors.Extentions {
                 new ClientManager ()), "client-manager");
 
             services.AddAkkatecture (actorSystem)
-                .AddActorReference<ClientManager> (clientManager);
+                .AddActorReference<ClientManager> (clientManager)
+                .AddActorReference<ClusterListenerActor> (clusterListener);
 
             return actorSystem;
         }
