@@ -16,7 +16,7 @@ namespace Akkamart.Membership.Server
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var actorsystem = services.AddActorsystem ("akkamart.home.conf");
+            var actorsystem = services.AddActorsystem ("akkamart.Identity.conf");
             services.AddMvc().AddNewtonsoftJson();
             services.AddResponseCompression(opts =>
             {

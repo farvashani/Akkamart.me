@@ -1,17 +1,15 @@
 using System.Threading.Tasks;
 using Akka.Actor;
-using Akkamart.Home.Server.Domain.Client;
-using Akkamart.Home.Server.Domain.Client.Commands;
 using Akkamart.Server.Shared.Client;
 using Akkamart.Server.Shared.Client.Commands;
-using Akkamart.Shared;
 using Akkatecture.Akka;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.Extensions.Logging;
 
-namespace Akkamart.Home.Server.Actors.Extentions {
+namespace Akkamart.Home.Server.Actors.Extentions
+{
     public class ClientActorMiddleware {
         private readonly RequestDelegate _next;
         private readonly ILogger _logger;
