@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>BionicExtensions</id>
+    <version>1.0.19</version>
+    <authors>Bionic Framework Contributors</authors>
+    <owners>Bionic Framework Contributors</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/BionicFramework/BionicCLI/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/BionicFramework/BionicExtensions</projectUrl>
+    <iconUrl>https://vectr.com/bmsantos/a2sGndBV8e.svg?width=256&amp;height=256&amp;select=a2sGndBV8epage0</iconUrl>
+    <description>Bionic Extensions - Development Extensions for a uniform Blazor development experience</description>
+    <copyright>(c) Bionic Framework Contributors. All rights reserved.</copyright>
+    <tags>ASP.NET Core, Blazor, Bionic, Ionic, Android, iOS, PWA, Electron, Capacitor</tags>
+    <repository type="git" url="https://github.com/BionicFramework/BionicExtensions" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.1">
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="2.1.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="2.1.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

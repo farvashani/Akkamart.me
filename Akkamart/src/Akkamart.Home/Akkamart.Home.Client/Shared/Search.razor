@@ -1,6 +1,7 @@
-@inherits Search
+@inherits SearchBase
 <div class="frame">
-        <form type="submit">
-            <search-input></search-input>
+        <form action="api\search" method="POST">
+           <input name="searchTerm" id="searchTerm" placeholder="Hi, How can help you?"/>
+           <input type="submit" value="Go"/>
         </form>
 </div>

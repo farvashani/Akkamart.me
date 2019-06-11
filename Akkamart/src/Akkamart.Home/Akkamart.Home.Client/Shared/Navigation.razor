@@ -1,0 +1,28 @@
+
+@inherits NavigationBase
+<div id="directories">
+    <ul>
+    @foreach (var navItem in navigationState?.TopNavigation)
+            {
+                <li>
+                    <a href="@navItem.BaseUrl">@navItem.Title</a>
+                </li>
+                
+                  <ul>
+                @foreach(var act in navItem.Actions){
+                    
+                      
+                            
+                                <li><a href="@act.Url">@act.Title</a></li>
+                            
+                        
+                   
+                }
+                </ul>
+                
+               
+            }
+        
+    </ul>
+
+</div>

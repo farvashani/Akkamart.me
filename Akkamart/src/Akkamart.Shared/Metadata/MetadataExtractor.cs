@@ -30,12 +30,16 @@ namespace Akkamart.Shared.Metadata
 
             }
 
-            private static Dictionary<string, Type> getParams (Type cmd) {
-                var paramsDict = new Dictionary<string, Type> ();
+            private static List<ActionParam> getParams (Type cmd) {
+                var paramsDict = new List<ActionParam>();
                 var ctor = cmd.GetConstructors ().OrderBy (np => np.GetParameters ().Count ()).FirstOrDefault ();
                 var constParams = ctor.GetParameters ();
                 foreach (var p in constParams) {
-                    paramsDict.Add (p.GetType ().Name, p.GetType ());
+                    var param = new ActionParam(){
+                        Name = p.GetType ().Name,
+                        Type = p.GetType ().ToString()
+                    };
+                    paramsDict.Add (param);
 
                 }
                 return paramsDict;

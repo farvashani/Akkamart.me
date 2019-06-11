@@ -5,7 +5,8 @@ namespace Akkamart.Shared.Metadata {
     public class ServiceAction {
         public string Title { get; set; }
         public string Description { get; set; }
-        public Dictionary<string, Type> Params { get; set; }
+        public string Url { get; set; }
+        public List<ActionParam> Params { get; set; }
 
     }
 }
