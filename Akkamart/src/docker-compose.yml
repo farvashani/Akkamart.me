@@ -1,7 +1,7 @@
 version: "3"
 services:
   akkamart-seed:
-    image: akkamart-seed:$${Tag:-latest}
+    image: akkamart-seed:${Tag:-latest}
     container_name: akkamart-seed
     build: 
       context: ./Akkamart.Seed1
