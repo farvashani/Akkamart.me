@@ -1,18 +1,18 @@
 version: "3"
 services:
-  akkamart.seed1:
-    image: akkamart-seed1:${TAG:-latest}
-      container_name: akkamart-seed1
-      build:
-        context: ./Akkamart/Akkamart.Seed1
-        dockerfile: Dockerfile
-      ports:
-        - "5050:5050"
+  akkamart-seed:
+    image: akkamart-seed:$${Tag:-latest}
+    container_name: akkamart-seed
+    build: 
+      context: ./Akkamart.Seed1
+      dockerfile: Dockerfile
+    ports: 
+      - "5050:5050"
   akkamart-home:
     image: akkamart-home:${TAG:-latest}
     container_name: akkamart-home
     build:
-      context: ./Akkamart/Akkamart.Home
+      context: ./Akkamart.Home
       dockerfile: Dockerfile
     ports:
       - "4001:4001"
@@ -24,7 +24,7 @@ services:
     image: akkamart-membership:${TAG:-latest}
     container_name: akkamart-membership
     build:
-      context: ./Akkamart/Akkamart.membership
+      context: ./Akkamart.Membership
       dockerfile: Dockerfile
     ports:
       - "4003:4003"
@@ -36,7 +36,7 @@ services:
     image: nginx:1.15-alpine
     restart: unless-stopped
     depends_on: 
-      - akkamart-Membership
+      - akkamart-membership
       - akkamart-home
     volumes:
       - ./wwwroot:/usr/share/nginx/html
