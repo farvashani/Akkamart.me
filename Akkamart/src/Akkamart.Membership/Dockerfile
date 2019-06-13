@@ -67,5 +67,5 @@ COPY dist ./Membership
 WORKDIR /akkamart/Membership
 # Super hack to work around https://github.com/aspnet/Blazor/issues/376
 
-ENTRYPOINT ["dotnet", "Akkamart.Membership.Server.dll"]
+ENTRYPOINT ["dotnet", "Akkamart.Membership.Server.dll", "akkamart.membership.conf"]
 #   ENTRYPOINT ["tail", "-f", "/dev/null"]

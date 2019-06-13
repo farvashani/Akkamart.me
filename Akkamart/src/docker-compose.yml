@@ -1,5 +1,16 @@
 version: "3"
 services:
+  blazingpizza:
+    image: akkamart/blazingpizza:${TAG:-latest}
+    container_name: akkamart-seed      -blazingpizza
+    build:
+      context: ./services/BlazingPizza
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Staging
+      - ASPNETCORE_URLS=http://*:5001
   akkamart-seed:
     image: akkamart-seed:${Tag:-latest}
     container_name: akkamart-seed

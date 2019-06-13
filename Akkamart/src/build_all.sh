@@ -19,3 +19,9 @@ pwd
 cd src/Akkamart.Seed1/
 sh build_docker.sh
 echo "========================================"
+echo $(pwd)
+echo "========================================"
+pwd
+cd src/Akkamart.Saga/
+sh build_docker.sh
+echo "========================================"

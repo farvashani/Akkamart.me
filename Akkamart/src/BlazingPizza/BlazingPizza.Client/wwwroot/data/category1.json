@@ -1,0 +1,47 @@
+[
+  {
+      "ParentId": null,
+      "Title": "محصولات من",
+      "Id": "526531a0-1dde-4a94-951f-35f6566ecbb6"
+  },
+  {
+      "ParentId": null,
+      "Title": "کالاهای اساسی",
+      "Id": "18268500-f8db-4550-9afd-0f4225cd7072"
+  },
+  {
+      "ParentId": null,
+      "Title": "لبنیات و صبحانه",
+      "Id": "a62c5c84-8c04-410f-99f0-4167c16ec7a1"
+  },
+  {
+      "ParentId": null,
+      "Title": "پروتئینی و غذای آماده",
+      "Id": "6c473f3e-852c-4f5a-aeab-dc7a32ec22b8"
+  },
+  {
+      "ParentId": null,
+      "Title": "نوشیدنی",
+      "Id": "3a7b189a-ff7e-48e8-ae5e-76b977c662cc"
+  },
+  {
+      "ParentId": null,
+      "Title": "شوینده، بهداشتی",
+      "Id": "3a6cfb1d-f8e9-4da0-8334-5b7f339a63e4"
+  },
+  {
+      "ParentId": null,
+      "Title": "چاشنی و مخلفات",
+      "Id": "4c2b3bd1-54c6-4ec8-829a-bea9fa4c4261"
+  },
+  {
+      "ParentId": null,
+      "Title": "شیرینی و تنقلات",
+      "Id": "982eca1b-ca1e-4a69-bf70-d4d90c415c94"
+  },
+  {
+      "ParentId": null,
+      "Title": "لوازم مصرفی، آشپزخانه و فرهنگی",
+      "Id": "52cd26fa-1c3a-42c7-8bb8-d9b9973b8f7c"
+  }
+]

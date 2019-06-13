@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "/home/hossein/Documents/MyProjects/Himart-Core-Blazor/Himart-Blazor-PWA"
+		},
+		{
+			"name": "SSH FS - azurserver",
+			"uri": "ssh://azurserver/"
+		}
+	],
+	"settings": {}
+}

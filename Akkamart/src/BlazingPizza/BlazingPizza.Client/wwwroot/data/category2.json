@@ -1,0 +1,257 @@
+[
+  {
+    "ParentId": "526531a0-1dde-4a94-951f-35f6566ecbb6",
+    "Title": "بدون دسته",
+    "Id": "a5081f08-a2ae-4f72-a778-b4c2468c1362"
+  },
+  {
+    "ParentId": "526531a0-1dde-4a94-951f-35f6566ecbb6",
+    "Title": "پروتئینی باز",
+    "Id": "013e71b2-d48b-48e3-8a45-381383d4c836"
+  },
+  {
+    "ParentId": "526531a0-1dde-4a94-951f-35f6566ecbb6",
+    "Title": "لبنیات",
+    "Id": "a56a9915-9a72-4c9a-8ddb-3623d19dfdf5"
+  },
+  {
+    "ParentId": "526531a0-1dde-4a94-951f-35f6566ecbb6",
+    "Title": "نان، غلات",
+    "Id": "c00d284d-eb41-40c9-8a23-9a7d152aedc7"
+  },
+  {
+    "ParentId": "526531a0-1dde-4a94-951f-35f6566ecbb6",
+    "Title": "برنج ، حبوبات",
+    "Id": "0f3c894e-1cbb-4390-9518-406a1624a5c9"
+  },
+  {
+    "ParentId": "526531a0-1dde-4a94-951f-35f6566ecbb6",
+    "Title": "چای، قند، شکر",
+    "Id": "e1523a66-244e-41c8-86da-c88b67fd6247"
+  },
+  {
+    "ParentId": "526531a0-1dde-4a94-951f-35f6566ecbb6",
+    "Title": "خشکبار و تنقلات",
+    "Id": "9029fffe-233a-47d3-b195-48dfe4e726ec"
+  },
+  {
+    "ParentId": "526531a0-1dde-4a94-951f-35f6566ecbb6",
+    "Title": "ترشیجات",
+    "Id": "138733d8-5c10-4cff-9ac0-094aea4f6d1a"
+  },
+  {
+    "ParentId": "526531a0-1dde-4a94-951f-35f6566ecbb6",
+    "Title": "لوازم التحریر",
+    "Id": "bbf3863d-dc19-41e0-b0c6-6fb3cdf79849"
+  },
+  {
+    "ParentId": "526531a0-1dde-4a94-951f-35f6566ecbb6",
+    "Title": "لوازم مصرفی باز",
+    "Id": "77e9c1d1-b8e0-4bf0-91c9-3fbd661712db"
+  },
+  {
+    "ParentId": "526531a0-1dde-4a94-951f-35f6566ecbb6",
+    "Title": "دخانیات و زغال",
+    "Id": "2f978275-0076-45c4-96ac-50e07f424991"
+  },
+  {
+    "ParentId": "18268500-f8db-4550-9afd-0f4225cd7072",
+    "Title": "روغن",
+    "Id": "94b427a6-2f2c-43d4-8a68-0a995165cce2"
+  },
+  {
+    "ParentId": "18268500-f8db-4550-9afd-0f4225cd7072",
+    "Title": "ماکارونی و رشته",
+    "Id": "335c7bfc-1db6-45d7-9746-8d5ff845cb59"
+  },
+  {
+    "ParentId": "18268500-f8db-4550-9afd-0f4225cd7072",
+    "Title": "برنج و حبوبات",
+    "Id": "d0cf9ec9-efcc-4746-8ec8-4d1d7e6aa6a6"
+  },
+  {
+    "ParentId": "18268500-f8db-4550-9afd-0f4225cd7072",
+    "Title": "قند، شکر و خرما",
+    "Id": "7d13befe-27fb-48d5-bffe-cc61beb14344"
+  },
+  {
+    "ParentId": "18268500-f8db-4550-9afd-0f4225cd7072",
+    "Title": "نان و غلات",
+    "Id": "ae71ff04-9ec0-4f41-ab29-c684aa8d3cae"
+  },
+  {
+    "ParentId": "a62c5c84-8c04-410f-99f0-4167c16ec7a1",
+    "Title": "صبحانه",
+    "Id": "a7f78675-422d-4b39-83f0-bc03adcd7417"
+  },
+  {
+    "ParentId": "a62c5c84-8c04-410f-99f0-4167c16ec7a1",
+    "Title": "شیر",
+    "Id": "3d3e63ce-a765-4ac0-a0e2-50813b301392"
+  },
+  {
+    "ParentId": "a62c5c84-8c04-410f-99f0-4167c16ec7a1",
+    "Title": "پنیر",
+    "Id": "b5805932-b66e-4459-8100-dad5ac9ee5bf"
+  },
+  {
+    "ParentId": "a62c5c84-8c04-410f-99f0-4167c16ec7a1",
+    "Title": "ماست",
+    "Id": "c1dffaa8-f5e0-489e-9f71-4c12f037728d"
+  },
+  {
+    "ParentId": "a62c5c84-8c04-410f-99f0-4167c16ec7a1",
+    "Title": "بستنی",
+    "Id": "e4e815f9-c607-483a-8f05-6f3716b69d77"
+  },
+  {
+    "ParentId": "a62c5c84-8c04-410f-99f0-4167c16ec7a1",
+    "Title": "خامه",
+    "Id": "51a500c2-e4c8-46e5-95a7-c9ed8de513c2"
+  },
+  {
+    "ParentId": "a62c5c84-8c04-410f-99f0-4167c16ec7a1",
+    "Title": "کره",
+    "Id": "2ef7caf7-1dd9-415b-8926-36119f463da7"
+  },
+  {
+    "ParentId": "a62c5c84-8c04-410f-99f0-4167c16ec7a1",
+    "Title": "کشک",
+    "Id": "48210440-0d9d-4aca-ab85-96a193c7d0af"
+  },
+  {
+    "ParentId": "6c473f3e-852c-4f5a-aeab-dc7a32ec22b8",
+    "Title": "پروتئینی",
+    "Id": "aff15eb0-c07a-47e6-ad0b-886c5cd3029d"
+  },
+  {
+    "ParentId": "6c473f3e-852c-4f5a-aeab-dc7a32ec22b8",
+    "Title": "کنسرو",
+    "Id": "e4ca31fd-2ce7-49f9-a799-8f8ee22f8e0a"
+  },
+  {
+    "ParentId": "6c473f3e-852c-4f5a-aeab-dc7a32ec22b8",
+    "Title": "غذای اماده و منجمد",
+    "Id": "db30ca06-4b05-4043-8097-cf4e32688bdb"
+  },
+  {
+    "ParentId": "6c473f3e-852c-4f5a-aeab-dc7a32ec22b8",
+    "Title": "کمپوت",
+    "Id": "166ba75b-22f7-4a96-8109-0024d2673060"
+  },
+  {
+    "ParentId": "3a7b189a-ff7e-48e8-ae5e-76b977c662cc",
+    "Title": "نوشابه و دوغ",
+    "Id": "db0c2074-a91e-4765-8d76-68ab9b93fb5d"
+  },
+  {
+    "ParentId": "3a7b189a-ff7e-48e8-ae5e-76b977c662cc",
+    "Title": "آبمعدنی و آبمیوه",
+    "Id": "f9b335c6-90c6-4292-a293-42b6505e73e6"
+  },
+  {
+    "ParentId": "3a7b189a-ff7e-48e8-ae5e-76b977c662cc",
+    "Title": "چای و قهوه",
+    "Id": "aebd64c2-47ad-4a36-b474-b8f4a2c75d53"
+  },
+  {
+    "ParentId": "3a7b189a-ff7e-48e8-ae5e-76b977c662cc",
+    "Title": "عرقیجات",
+    "Id": "32b3b01f-5d6f-4315-b402-27091621c388"
+  },
+  {
+    "ParentId": "3a6cfb1d-f8e9-4da0-8334-5b7f339a63e4",
+    "Title": "دستمال",
+    "Id": "de91db8a-c78e-4254-8bf9-90633153652a"
+  },
+  {
+    "ParentId": "3a6cfb1d-f8e9-4da0-8334-5b7f339a63e4",
+    "Title": "شوینده ظروف و لباس",
+    "Id": "e0e0499b-2130-4f17-8c83-eb4598fc4504"
+  },
+  {
+    "ParentId": "3a6cfb1d-f8e9-4da0-8334-5b7f339a63e4",
+    "Title": "بهداشت فردی، کودک و بانوان",
+    "Id": "62f51c10-fde9-441f-abf5-5765d960e18e"
+  },
+  {
+    "ParentId": "3a6cfb1d-f8e9-4da0-8334-5b7f339a63e4",
+    "Title": "بهداشت خانگی",
+    "Id": "3eb709b0-ad39-4440-b984-9e335be1998b"
+  },
+  {
+    "ParentId": "4c2b3bd1-54c6-4ec8-829a-bea9fa4c4261",
+    "Title": "رب و سس",
+    "Id": "fc90e420-5e90-4d0c-8dfa-ad192a06baa5"
+  },
+  {
+    "ParentId": "4c2b3bd1-54c6-4ec8-829a-bea9fa4c4261",
+    "Title": "نمک و ادویه",
+    "Id": "ee9a5cec-9233-4aa3-bebc-6a27bfb5526c"
+  },
+  {
+    "ParentId": "4c2b3bd1-54c6-4ec8-829a-bea9fa4c4261",
+    "Title": "مخلفات",
+    "Id": "5146757f-6422-40e0-9d74-77b862576b2c"
+  },
+  {
+    "ParentId": "4c2b3bd1-54c6-4ec8-829a-bea9fa4c4261",
+    "Title": "عصاره و زعفران",
+    "Id": "6fb147bc-419a-4f3d-a937-962af7a03ad2"
+  },
+  {
+    "ParentId": "4c2b3bd1-54c6-4ec8-829a-bea9fa4c4261",
+    "Title": "آبلیمو",
+    "Id": "e5214ae9-98f9-4064-a5e9-f82940c77301"
+  },
+  {
+    "ParentId": "982eca1b-ca1e-4a69-bf70-d4d90c415c94",
+    "Title": "چیپس و پفک",
+    "Id": "45d58914-863a-444e-871e-d20b99f86337"
+  },
+  {
+    "ParentId": "982eca1b-ca1e-4a69-bf70-d4d90c415c94",
+    "Title": "کیک و بیسکوئیت",
+    "Id": "22b03c30-1477-4900-add4-2071ffdbdb61"
+  },
+  {
+    "ParentId": "a62c5c84-8c04-410f-99f0-4167c16ec7a1",
+    "Title": "تنقلات",
+    "Id": "08e3b5db-6ead-4727-9bcd-a3e6a7e7a4c0"
+  },
+  {
+    "ParentId": "982eca1b-ca1e-4a69-bf70-d4d90c415c94",
+    "Title": "تنقلات",
+    "Id": "08e3b5db-6ead-4727-9bcd-a3e6a7e7a4c0"
+  },
+  {
+    "ParentId": "982eca1b-ca1e-4a69-bf70-d4d90c415c94",
+    "Title": "دسر",
+    "Id": "277a62e1-49a7-43cc-b309-6c1e4e644a76"
+  },
+  {
+    "ParentId": "982eca1b-ca1e-4a69-bf70-d4d90c415c94",
+    "Title": "آجیل و خشکبار",
+    "Id": "37afe50e-d967-4bd7-bb26-5129d5f5cee9"
+  },
+  {
+    "ParentId": "52cd26fa-1c3a-42c7-8bb8-d9b9973b8f7c",
+    "Title": "آشپزخانه",
+    "Id": "cab33272-4078-47ce-a0cd-85426d53c194"
+  },
+  {
+    "ParentId": "52cd26fa-1c3a-42c7-8bb8-d9b9973b8f7c",
+    "Title": "لوازم مصرفی",
+    "Id": "fc87afd5-0968-4634-a813-1d2628b7f70b"
+  },
+  {
+    "ParentId": "52cd26fa-1c3a-42c7-8bb8-d9b9973b8f7c",
+    "Title": "لوازم التحریر و فرهنگی",
+    "Id": "f644bea5-eff3-4b60-a22c-133b585e219c"
+  },
+  {
+    "ParentId": "52cd26fa-1c3a-42c7-8bb8-d9b9973b8f7c",
+    "Title": "زغال و دخانیات",
+    "Id": "84505d12-1d94-43fb-b340-09d30cea57f5"
+  }
+]
