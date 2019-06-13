@@ -15,7 +15,7 @@ namespace Akkamart.Shared.Metadata
                                         new ServiceAction(){
                                             Title = "Become a member",
                                             Description = "Become a member by register your mobile",
-                                            Url=@"\register",
+                                            Url=@"/membership/register",
                                             Params = new List<ActionParam>(){
                                                 new ActionParam(){Name = "Name", Type = typeof(string).ToString()},
                                                 new ActionParam(){Name = "Mobile", Type = typeof(string).ToString()}
@@ -25,7 +25,7 @@ namespace Akkamart.Shared.Metadata
                                         new ServiceAction(){
                                             Title = "Verify your account",
                                             Description = "Verify your account by the verification code you received",
-                                            Url=@"\verify",
+                                            Url=@"/membership/verify",
                                              Params = new List<ActionParam>(){
                                                 new ActionParam(){Name = "ConfirmMobile", Type = typeof(string).ToString()},
                                                 new ActionParam(){Name = "ConfirmEmail", Type = typeof(string).ToString()}
@@ -35,7 +35,7 @@ namespace Akkamart.Shared.Metadata
                                         new ServiceAction(){
                                             Title = "Add Your Profile Info",
                                             Description = "Add your information to rich your profile",
-                                            Url=@"\addprofile",
+                                            Url=@"/membership/addprofile",
                                              Params = new List<ActionParam>(){
                                                 new ActionParam(){Name = "Title", Type = typeof(string).ToString()},
                                                 new ActionParam(){Name = "Firstname", Type = typeof(string).ToString()},
@@ -49,7 +49,7 @@ namespace Akkamart.Shared.Metadata
                                         new ServiceAction(){
                                             Title = "Set a credential for your account",
                                             Description = "Set an username and password for your account",
-                                            Url=@"\setcredential",
+                                            Url=@"/membership/setcredential",
                                              Params = new List<ActionParam>(){
                                                 new ActionParam(){Name = "Username", Type = typeof(string).ToString()},
                                                 new ActionParam(){Name = "NewPassword", Type = typeof(string).ToString()},
@@ -60,7 +60,7 @@ namespace Akkamart.Shared.Metadata
                                         new ServiceAction(){
                                             Title = "Forget your password",
                                             Description = "Reset your password",
-                                            Url=@"\ResetPassword",
+                                            Url=@"/membership/ResetPassword",
                                              Params = new List<ActionParam>(){
                                                 new ActionParam(){Name = "NewPassword", Type = typeof(string).ToString()},
                                                 new ActionParam(){Name = "ConfirmNewPassword", Type = typeof(string).ToString()}
