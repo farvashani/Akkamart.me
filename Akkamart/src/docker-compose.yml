@@ -11,7 +11,10 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Staging
       - ASPNETCORE_URLS=http://*:5001
-  akkamart-seed:
+      - OWN_HOST=akkamart-blazingpizza
+      - SEED_NODE_HOST=seed1
+      - SQLSERVER_CONNECTION=Server=localhost,1433;Database=Akkamartdbdb;User Id=sa;Password=<YourStrong!Passw0rd>;
+  akkamart-seed1:
     image: akkamart-seed:${Tag:-latest}
     container_name: akkamart-seed
     build: 
@@ -19,6 +22,12 @@ services:
       dockerfile: Dockerfile
     ports: 
       - "5050:5050"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Staging
+      - ASPNETCORE_URLS=http://*:4001
+      - OWN_HOST=akkamart-home
+      - SEED_NODE_HOST=seed1
+      - SQLSERVER_CONNECTION=Server=localhost,1433;Database=Akkamartdbdb;User Id=sa;Password=<YourStrong!Passw0rd>;
   akkamart-home:
     image: akkamart-home:${TAG:-latest}
     container_name: akkamart-home
@@ -31,6 +40,9 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Staging
       - ASPNETCORE_URLS=http://*:4001
+      - OWN_HOST=akkamart-home
+      - SEED_NODE_HOST=seed1
+      - SQLSERVER_CONNECTION=Server=localhost,1433;Database=Akkamartdbdb;User Id=sa;Password=<YourStrong!Passw0rd>;
   akkamart-membership:
     image: akkamart-membership:${TAG:-latest}
     container_name: akkamart-membership
@@ -43,6 +55,9 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Staging
       - ASPNETCORE_URLS=http://*:4003
+      - OWN_HOST=akkamart-membership
+      - SEED_NODE_HOST=seed1
+      - SQLSERVER_CONNECTION=Server=localhost,1433;Database=Akkamartdbdb;User Id=sa;Password=<YourStrong!Passw0rd>;
   nginx:
     image: nginx:1.15-alpine
     restart: unless-stopped
@@ -62,7 +77,17 @@ services:
       - "5555:5555"
       - "4444:4444"
     command: '/bin/sh -c ''while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g "daemon off;"'''
-
+  mssql:
+    image: microsoft/mssql-server-linux:2017-latest
+    container_name: akkamart-mssql:${TAG:-latest}
+    volumes:
+      - mssql_server_data:/var/opt/mssql/data
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_PID: Express
+      SA_PASSWORD: MyPassword123456
+    ports:
+      - "1433:1433"
   certbot:
     image: certbot/certbot
     restart: unless-stopped
