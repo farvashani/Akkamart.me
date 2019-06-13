@@ -17,6 +17,13 @@
   <ItemGroup>
     <ProjectReference Include="..\Akkamart.Gateway.Client\Akkamart.Gateway.Client.csproj" />
     <ProjectReference Include="..\Akkamart.Gateway.Shared\Akkamart.Gateway.Shared.csproj" />
+   <ProjectReference Include="..\..\Akkamart.Shared\Akkamart.Shared.csproj" />
+    <ProjectReference Include="..\..\Akkamart.Server.Shared\Akkamart.Server.Shared.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="akkamart.Gateway.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup> 
 
 </Project>

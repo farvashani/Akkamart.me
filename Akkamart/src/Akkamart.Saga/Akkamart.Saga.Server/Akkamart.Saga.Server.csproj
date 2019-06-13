@@ -17,6 +17,13 @@
   <ItemGroup>
     <ProjectReference Include="..\Akkamart.Saga.Client\Akkamart.Saga.Client.csproj" />
     <ProjectReference Include="..\Akkamart.Saga.Shared\Akkamart.Saga.Shared.csproj" />
+  <ProjectReference Include="..\..\Akkamart.Shared\Akkamart.Shared.csproj" />
+    <ProjectReference Include="..\..\Akkamart.Server.Shared\Akkamart.Server.Shared.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="akkamart.Saga.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup> 
 
 </Project>

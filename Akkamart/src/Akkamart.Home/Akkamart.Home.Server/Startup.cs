@@ -15,6 +15,13 @@ namespace Akkamart.Home.Server {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices (IServiceCollection services) {
+             services.AddCors (options => {
+                options.AddPolicy ("AllowAnyOrigin",
+                    builder => builder
+                    .AllowAnyOrigin ()
+                    .AllowAnyMethod ()
+                    .AllowAnyHeader ());
+            });
 
              actorsystem = services.AddActorsystem ("akkamart.home.conf");
 
@@ -28,6 +35,7 @@ namespace Akkamart.Home.Server {
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure (IApplicationBuilder app, IWebHostEnvironment env) {
+            app.UseCors ("AllowAnyOrigin");
             app.UseResponseCompression ();
 
             if (env.IsDevelopment ()) {

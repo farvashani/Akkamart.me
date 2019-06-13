@@ -1,14 +1,14 @@
 
 @inherits NavigationBase
-<div id="directories">
-    <ul>
+<div id="serviceNavigations">
+    <ul class="serviceRoot">
     @foreach (var navItem in navigationState?.TopNavigation)
             {
-                <li>
+                <li class="">
                     <a href="@navItem.BaseUrl">@navItem.Title</a>
                 </li>
                 
-                  <ul>
+                  <ul class="serviceActions">
                 @foreach(var act in navItem.Actions){
                     
                       

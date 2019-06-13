@@ -16,6 +16,13 @@ namespace Akkamart.Membership.Server
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors (options => {
+                options.AddPolicy ("AllowAnyOrigin",
+                    builder => builder
+                    .AllowAnyOrigin ()
+                    .AllowAnyMethod ()
+                    .AllowAnyHeader ());
+            });
             var actorsystem = services.AddActorsystem ("akkamart.Identity.conf");
             services.AddMvc().AddNewtonsoftJson();
             services.AddResponseCompression(opts =>
@@ -23,11 +30,13 @@ namespace Akkamart.Membership.Server
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
                     new[] { MediaTypeNames.Application.Octet });
             });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors ("AllowAnyOrigin");
             app.UseResponseCompression();
 
             if (env.IsDevelopment())

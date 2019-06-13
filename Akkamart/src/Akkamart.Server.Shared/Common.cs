@@ -44,6 +44,7 @@ namespace Akkamart.Server.Shared {
             Console.WriteLine ("Exiting..");
         }
 
+        [Obsolete]
         public static void Shutdown (ActorSystem sys) {
             CoordinatedShutdown.Get (sys).Run ().Wait (TimeSpan.FromSeconds (10));
 
