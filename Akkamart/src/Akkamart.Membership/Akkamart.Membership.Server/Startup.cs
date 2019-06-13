@@ -51,7 +51,7 @@ namespace Akkamart.Membership.Server
             {
                 endpoints.MapDefaultControllerRoute();
             });
-             app.UsePathBase ("/Membership/");
+             app.UsePathBase ("/membership/");
 
             app.UseBlazor<Client.Startup>();
         }
